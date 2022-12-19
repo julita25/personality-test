@@ -1,6 +1,4 @@
 @import '~rsuite/dist/rsuite.min.css';
-@import '~nprogress/nprogress.css';
-@import './colors.css';
 @import './fonts.css';
 
 @tailwind base;
