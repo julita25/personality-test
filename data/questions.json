@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "question": "You are really busy at work and a colleage is telling you their life story and personal woes. You:",
     "options": [
       "Dont dare to interrupt them",
@@ -9,6 +10,7 @@
     ]
   },
   {
+    "id": 2,
     "question": "You’ve been sitting in the doctor’s waiting room for more than 25 minutes. You:",
     "options": [
       "Look at your watch every two minutes",
@@ -18,6 +20,7 @@
     ]
   },
   {
+    "id": 3,
     "question": "You’re having an animated discussion with a colleague regarding a project that you’re in charge of. You:",
     "options": [
       "Dont dare to contradict them",
@@ -27,6 +30,7 @@
     ]
   },
   {
+    "id": 4,
     "question": "During dinner parties at your home, you have a hard time with people who:",
     "options": [
       "Ask you to tell a story in front of everyone else",
