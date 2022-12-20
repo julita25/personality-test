@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "rsuite";
 
 
-const Step = ({ title, options, next, prev }) => {
+const Step = ({ item, next, prev, selectedAnswers }) => {
+  const { title, options, id } = item;
+  const [selected, setSelected] = useState();
+
+  useEffect(() => {
+    setSelected()
+  }, [item])
+
+  const handleNext = () => {
+    console.log(selectedAnswers);
+    const updatedAnswer = { ...selectedAnswers };
+    updatedAnswer[id] = selected
+
+    next(updatedAnswer)
+  }
+
   return (
     <div className="space-y-5 flex flex-col justify-center items-center">
       <div className="text-2xl">{title}</div>
       {
-        options.map((option) => (
-          <div className="rounded-lg border border-blue-700 p-2 hover:border-blue-400 hover:bg-blue-200 w-full">
+        options?.map((option, index) => (
+          <div
+            onClick={() => setSelected(index + 1)}
+            className={`rounded-lg border border-blue-700 p-2 hover:border-blue-400 hover:bg-blue-200 w-full ${index === selected && "bg-blue-200"}`}>
             {option}
           </div>
 
@@ -16,12 +33,12 @@ const Step = ({ title, options, next, prev }) => {
       }
       {Boolean(next) && (
         <Button
-          onClick={next}
+          onClick={handleNext}
           appearance="primary"
           color="blue"
           className="bg-blue-600"
         >
-          Next question
+          {id === 4 ? "Finish" : "Next question"}
         </Button>
       )}
       {Boolean(prev) && (
