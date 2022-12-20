@@ -1,7 +1,8 @@
 import React from "react";
+import { instanceOf, number } from "prop-types";
 
 const TestSteps = ({ steps, currentIndex }) => (
-  <div className="h-full flex flex-col justify-between">
+  <div className="h-full flex flex-col justify-between w-full">
     {
       steps[currentIndex]
     }
@@ -18,5 +19,9 @@ const TestSteps = ({ steps, currentIndex }) => (
   </div>
 );
 
-
 export default TestSteps;
+
+TestSteps.propTypes = {
+  steps: instanceOf(Array).isRequired,
+  currentIndex: number.isRequired
+};
