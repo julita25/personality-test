@@ -10,7 +10,7 @@ const TestSteps = ({ steps, currentIndex }) => (
       {
         steps.map((step, index) => (
           <div
-            key={step.type?.name}
+            key={index}
             className={`w-4 h-4 rounded-full ${index === currentIndex ? "bg-gray-500" : "bg-gray-300"}`}
           />
         ))
@@ -22,6 +22,6 @@ const TestSteps = ({ steps, currentIndex }) => (
 export default TestSteps;
 
 TestSteps.propTypes = {
-  steps: instanceOf(Array).isRequired,
+  steps: instanceOf(Object).isRequired,
   currentIndex: number.isRequired
 };

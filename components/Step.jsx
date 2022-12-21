@@ -12,7 +12,6 @@ const Step = ({ item, next, prev, selectedAnswers }) => {
   }, [item]);
 
   const handleNext = () => {
-    console.log(selectedAnswers);
     const updatedAnswer = { ...selectedAnswers };
     updatedAnswer[id] = selectedOption;
 

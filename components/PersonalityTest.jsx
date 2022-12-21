@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Step from "../Step/Step";
-import TestSteps from "../TestSteps/TestSteps";
+import Step from "./Step";
+import TestSteps from "./TestSteps";
 import { useRouter } from "next/router";
 import { Message } from "rsuite";
 
@@ -12,6 +12,7 @@ const PersonalityTest = () => {
   const [answers, setAnswers] = useState({});
 
   const fetchTestQuestions = async () => {
+    console.log("here");
     const res = await fetch("/api/questions");
     if (res?.ok) {
       const response = await res.json()
