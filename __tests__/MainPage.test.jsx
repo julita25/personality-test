@@ -6,7 +6,7 @@ const mockPersonalityTest = jest.fn();
 jest.mock("../../components/PersonalityTest/PersonalityTest", () => (props) => {
   mockPersonalityTest(props);
   return <mock-PersonalityTest />
-})
+});
 
 describe("MainPage", () => {
   it("it renders the personality test component when the user click on start test", () => {

@@ -22,10 +22,11 @@ const mockSteps = [
     prev={mockPrev}
     selectedAnswers={{}}
   />
-]
+];
+
 describe("TestSteps", () => {
   it("renders the appropiate step, depending on the current index given", () => {
-    const { getByText } = render(<TestSteps steps={mockSteps} currentIndex={mockCurrentIndex} />)
+    const { getByText } = render(<TestSteps steps={mockSteps} currentIndex={mockCurrentIndex} />);
     const { options } = questions[2];
 
     options?.forEach((option) => {
