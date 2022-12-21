@@ -9,7 +9,7 @@ jest.mock("../../components/PersonalityTest/PersonalityTest", () => (props) => {
 });
 
 describe("MainPage", () => {
-  it("it renders the personality test component when the user click on start test", () => {
+  it("renders the personality test component when the user click on start test", () => {
     const { getByText } = render(<MainPage />);
 
     const startBtn = getByText("Start test");

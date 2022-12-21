@@ -12,7 +12,6 @@ const PersonalityTest = () => {
   const [answers, setAnswers] = useState({});
 
   const fetchTestQuestions = async () => {
-    console.log("here");
     const res = await fetch("/api/questions");
     if (res?.ok) {
       const response = await res.json()
@@ -35,7 +34,6 @@ const PersonalityTest = () => {
   const onComplete = (answer) => {
     setAnswers(answer);
     const score = Object.values(answers).reduce((prev, current) => prev + current, 0);
-    console.log(score);
     router.push(`/results/${score}`);
   };
 

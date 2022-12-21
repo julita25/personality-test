@@ -25,7 +25,7 @@ const mockSteps = [
 ];
 
 describe("TestSteps", () => {
-  it("renders the appropiate step, depending on the current index given", () => {
+  it("renders the right step, depending on the current index given", () => {
     const { getByText } = render(<TestSteps steps={mockSteps} currentIndex={mockCurrentIndex} />);
     const { options } = questions[2];
 
