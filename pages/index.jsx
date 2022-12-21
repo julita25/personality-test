@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Button } from "rsuite";
-import PersonalityModule from "../components/PersonalityModule/PersonalityModule";
+import PersonalityTest from "../components/PersonalityTest";
 
 const MainPage = () => {
   const [startTest, setStartTest] = useState(false)
@@ -23,7 +23,7 @@ const MainPage = () => {
                 </Button>
               </div>
               :
-              <PersonalityModule />
+              <PersonalityTest />
           }
         </div>
       </div>
