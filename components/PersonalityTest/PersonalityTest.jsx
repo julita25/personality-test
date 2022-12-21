@@ -4,7 +4,7 @@ import TestSteps from "../TestSteps/TestSteps";
 import { useRouter } from "next/router";
 import { Message } from "rsuite";
 
-const PersonalityModule = () => {
+const PersonalityTest = () => {
   const router = useRouter();
   const [testQuestions, setTestQuestions] = useState([]);
   const [error, setError] = useState();
@@ -40,16 +40,14 @@ const PersonalityModule = () => {
 
   const onPrevStep = () => setCurrentIndex(currentIndex - 1);
 
-  const getSteps = () => (
-    testQuestions.map((it, index) => (
-      <Step
-        item={it}
-        next={index === testQuestions.length - 1 ? onComplete : onNextStep}
-        prev={index !== 0 && onPrevStep}
-        selectedAnswers={answers}
-      />
-    ))
-  );
+  const steps = testQuestions.map((it, index) => (
+    <Step
+      item={it}
+      next={index === testQuestions.length - 1 ? onComplete : onNextStep}
+      prev={index !== 0 && onPrevStep}
+      selectedAnswers={answers}
+    />
+  ));
 
   return (
     <>
@@ -57,10 +55,10 @@ const PersonalityModule = () => {
         <Message showIcon type="error" header={error.message} className="w-full" />
       )}
       {Boolean(testQuestions?.length) && (
-        <TestSteps steps={getSteps()} currentIndex={currentIndex} />
+        <TestSteps steps={steps} currentIndex={currentIndex} />
       )}
     </>
   )
 };
 
-export default PersonalityModule;
+export default PersonalityTest;
