@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Step from "./Step";
 import TestSteps from "./TestSteps";
 import { useRouter } from "next/router";
-import { Message } from "rsuite";
+import { Loader, Message } from "rsuite";
 
 const PersonalityTest = () => {
   const router = useRouter();
@@ -47,6 +47,8 @@ const PersonalityTest = () => {
       selectedAnswers={answers}
     />
   ));
+
+  if (!testQuestions.length) return <Loader size="lg" center />
 
   return (
     <>
