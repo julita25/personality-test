@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import MainPage from "../pages/index";
 
 const mockPersonalityTest = jest.fn();
-jest.mock("../../components/PersonalityTest/PersonalityTest", () => (props) => {
+jest.mock("../components/PersonalityTest", () => (props) => {
   mockPersonalityTest(props);
   return <mock-PersonalityTest />
 });
