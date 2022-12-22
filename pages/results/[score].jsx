@@ -21,7 +21,7 @@ const ResultsPage = () => {
           bordered
           header={(
             <div className="flex flex-col justify-center items-center space-y-2">
-              <img src={img} alt="result picture" className="w-42" />
+              <img src={img} alt="result picture" className="w-72" />
               <div>Your result</div>
             </div>
           )}
