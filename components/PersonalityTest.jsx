@@ -33,7 +33,7 @@ const PersonalityTest = () => {
 
   const onComplete = (answer) => {
     setAnswers(answer);
-    const score = Object.values(answers).reduce((prev, current) => prev + current, 0);
+    const score = Object.values(answer).reduce((prev, current) => prev + current, 0);
     router.push(`/results/${score}`);
   };
 
