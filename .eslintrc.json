@@ -34,6 +34,10 @@
             "error",
             "double"
         ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
         "no-underscore-dangle": "off",
         "no-bitwise": "off",
         "react/jsx-props-no-spreading": "off",
@@ -53,15 +57,15 @@
                     "state"
                 ]
             }
-        ],
-        "settings": {
-            "import/resolver": {
-                "node": {
-                    "moduleDirectory": [
-                        "node_modules",
-                        "."
-                    ]
-                }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "moduleDirectory": [
+                    "node_modules",
+                    "."
+                ]
             }
         }
     }

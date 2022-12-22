@@ -22,7 +22,7 @@ describe("Step", () => {
     const { options } = mockItem;
 
     options?.forEach((option) => {
-      expect(getByText(option)).toBeVisible()
+      expect(getByText(option)).toBeVisible();
     });
   });
 

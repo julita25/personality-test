@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import { Button, Panel, Loader } from "rsuite";
 import { testResults } from "../../config/constants";
@@ -11,7 +11,7 @@ const ResultsPage = () => {
   const title = score > 8 ? "You are an extrovert" : "You are more of an introvert";
   const img = score > 8 ? "/images/extrovert.png" : "/images/introvert.jpg";
 
-  if (!score) return <Loader size="lg" center />
+  if (!score) return <Loader size="lg" center />;
 
   return (
     <div className="p-16 flex justify-center items-center">
@@ -21,7 +21,7 @@ const ResultsPage = () => {
           bordered
           header={(
             <div className="flex flex-col justify-center items-center space-y-2">
-              <img src={img} alt="result picture" className="w-72" />
+              <img src={img} alt="results" className="w-72" />
               <div>Your result</div>
             </div>
           )}

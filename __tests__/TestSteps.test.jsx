@@ -6,7 +6,6 @@ import { questions } from "../data/questions";
 
 const mockNext = jest.fn();
 const mockPrev = jest.fn();
-
 const mockCurrentIndex = 1;
 
 const mockSteps = [
@@ -28,7 +27,6 @@ describe("TestSteps", () => {
   it("renders the right step, depending on the current index given", () => {
     const { getByText } = render(<TestSteps steps={mockSteps} currentIndex={mockCurrentIndex} />);
     const { options } = questions[2];
-
     options?.forEach((option) => {
       expect(getByText(option)).toBeVisible();
     });

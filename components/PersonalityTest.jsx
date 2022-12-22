@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Step from "./Step";
-import TestSteps from "./TestSteps";
 import { useRouter } from "next/router";
 import { Loader, Message } from "rsuite";
+import Step from "./Step";
+import TestSteps from "./TestSteps";
 
 const PersonalityTest = () => {
   const router = useRouter();
@@ -14,7 +14,7 @@ const PersonalityTest = () => {
   const fetchTestQuestions = async () => {
     const res = await fetch("/api/questions");
     if (res?.ok) {
-      const response = await res.json()
+      const response = await res.json();
       setTestQuestions(response);
       setError();
     } else {
@@ -48,7 +48,7 @@ const PersonalityTest = () => {
     />
   ));
 
-  if (!testQuestions.length) return <Loader size="lg" center />
+  if (!testQuestions.length) return <Loader size="lg" center />;
 
   return (
     <>
@@ -59,7 +59,7 @@ const PersonalityTest = () => {
         <TestSteps steps={steps} currentIndex={currentIndex} />
       )}
     </>
-  )
+  );
 };
 
 export default PersonalityTest;

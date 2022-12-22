@@ -13,4 +13,4 @@ export const testResults = {
   asks you to make a choice or give an opinion about holiday destinations, dinner menus or the children's activities, you offer 
   little or no input. You're not comfortable and don't know how to react and those around you often interpret your passiveness 
   as a lack of interest or a certain reticence.`
-}
+};
