@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React, { useState } from "react";
+import Image from "next/image";
 import { Button } from "rsuite";
 import PersonalityTest from "../components/PersonalityTest";
 
