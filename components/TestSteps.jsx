@@ -2,7 +2,7 @@ import React from "react";
 import { instanceOf, number } from "prop-types";
 
 const TestSteps = ({ steps, currentIndex }) => (
-  <div className="h-full flex flex-col justify-between w-full">
+  <div className="h-full flex flex-col w-full">
     {
       steps[currentIndex]
     }

@@ -2,7 +2,6 @@ import { func, instanceOf } from "prop-types";
 import React, { useEffect, useState } from "react";
 import { Button } from "rsuite";
 
-
 const Step = ({ item, next, prev, selectedAnswers }) => {
   const { question, options, id } = item;
   const [selectedOption, setSelectedOption] = useState();

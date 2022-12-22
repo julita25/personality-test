@@ -14,6 +14,7 @@ const ResultsPage = () => {
     <div className="p-16 flex justify-center items-center">
       <div className="p-10 space-y-10 flex flex-col justify-center items-start w-2/3">
         <Panel
+          className="bg-white"
           bordered
           header={(
             <div className="flex flex-col justify-center items-center space-y-2">
