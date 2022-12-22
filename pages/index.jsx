@@ -13,7 +13,7 @@ const MainPage = () => {
           {
             !startTest ?
               <div className="space-y-5 flex flex-col">
-                <Image src="/images/cover.jpg" width={500} height={500} alt="cover" />
+                <Image src="/images/cover.jpg" width={600} height={300} alt="cover" priority />
                 <Button
                   onClick={() => setStartTest(true)}
                   className="bg-blue-600"
