@@ -2,7 +2,9 @@ import { func, instanceOf } from "prop-types";
 import React, { useEffect, useState } from "react";
 import { Button } from "rsuite";
 
-const Step = ({ item, next, prev, selectedAnswers }) => {
+const Step = ({
+  item, next, prev, selectedAnswers
+}) => {
   const { question, options, id } = item;
   const [selectedOption, setSelectedOption] = useState();
 
@@ -15,7 +17,7 @@ const Step = ({ item, next, prev, selectedAnswers }) => {
     updatedAnswer[id] = selectedOption;
 
     next(updatedAnswer);
-  }
+  };
 
   return (
     <div className="space-y-10 flex flex-col justify-center items-center">
@@ -23,15 +25,19 @@ const Step = ({ item, next, prev, selectedAnswers }) => {
         <div className="text-2xl">{question}</div>
         {
           options?.map((option, index) => {
-            const sel = index + 1
+            const sel = index + 1;
             return (
               <div
                 key={sel}
                 onClick={() => setSelectedOption(sel)}
-                className={`cursor-pointer rounded-lg border border-blue-700 p-2 hover:border-blue-400 hover:bg-blue-200 w-full ${sel === selectedOption && "bg-blue-200"}`}>
+                onKeyDown={() => setSelectedOption(sel)}
+                role="button"
+                tabIndex={0}
+                className={`cursor-pointer rounded-lg border border-blue-700 p-2 hover:border-blue-400 hover:bg-blue-200 w-full ${sel === selectedOption && "bg-blue-200"}`}
+              >
                 {option}
               </div>
-            )
+            );
           })
         }
       </div>
