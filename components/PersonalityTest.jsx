@@ -55,9 +55,7 @@ const PersonalityTest = () => {
       {Boolean(error) && (
         <Message showIcon type="error" header={error.message} className="w-full" />
       )}
-      {Boolean(testQuestions?.length) && (
-        <TestSteps steps={steps} currentIndex={currentIndex} />
-      )}
+      <TestSteps steps={steps} currentIndex={currentIndex} />
     </>
   );
 };
