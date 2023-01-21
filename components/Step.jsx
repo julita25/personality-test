@@ -9,7 +9,12 @@ const Step = ({
   const [selectedOption, setSelectedOption] = useState();
 
   useEffect(() => {
-    setSelectedOption();
+    const updatedAnswers = { ...selectedAnswers };
+    if (updatedAnswers[id]) {
+      setSelectedOption(updatedAnswers[id]);
+    } else {
+      setSelectedOption();
+    }
   }, [item]);
 
   const handleNext = () => {
